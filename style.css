@@ -1,6 +1,6 @@
 :root {
-    --font: #000;
-    --background: #fff;
+    --font: #fff;
+    --background: #000;
     --fontSize: 3.2vw;
 }
 
@@ -16,6 +16,15 @@ body {
     background-color: var(--background);
     color: var(--font);
     cursor: crosshair;
+    background-color:#fa99ff;
+background-image:
+radial-gradient(at 33% 20%, hsla(352,74%,68%,1) 0px, transparent 50%),
+radial-gradient(at 85% 20%, hsla(53,75%,74%,1) 0px, transparent 50%),
+radial-gradient(at 36% 64%, hsla(247,68%,62%,1) 0px, transparent 50%),
+radial-gradient(at 15% 23%, hsla(303,90%,62%,1) 0px, transparent 50%),
+radial-gradient(at 28% 78%, hsla(129,80%,66%,1) 0px, transparent 50%),
+radial-gradient(at 72% 2%, hsla(350,85%,73%,1) 0px, transparent 50%),
+radial-gradient(at 96% 13%, hsla(64,68%,75%,1) 0px, transparent 50%);
 }
 
 .main {
@@ -64,16 +73,10 @@ a {
 }
 
 .contactButton {
-    display: none;
-}
-
-/* 
-
-.contactButton {
     display: flex;
     flex-direction: row;
     padding: 16px 32px;
-    height: 68px;
+    min-height: 68px;
     border: 4px solid var(--font);
     border-radius: 48px;
     font-family: 'Helvetica Neue';
@@ -83,192 +86,13 @@ a {
     line-height: 150%;
     align-items: center;
     color: var(--font);
+    cursor: pointer;
 }
 
-*/
-
-.button {
-    --primary: var(--background);
-    --primary-dark: #111;
-    --primary-darkest: #222;
-    --text: var(--text);
-    --text-opacity: 1;
-    --success: #000;
-    --success-x: -12;
-    --success-stroke: 14;
-    --success-opacity: 0;
-    --border-radius: 48;
-    --overflow: hidden;
-    --x: 0;
-    --y: 0;
-    --rotate: 0;
-    --plane-x: 0;
-    --plane-y: 0;
-    --plane-opacity: 1;
-    --trails: rgba(0, 0, 0, 0.5);
-    --trails-stroke: 57;
-    --left-wing-background: var(--primary);
-    --left-wing-first-x: 0;
-    --left-wing-first-y: 0;
-    --left-wing-second-x: 50;
-    --left-wing-second-y: 0;
-    --left-wing-third-x: 0;
-    --left-wing-third-y: 100;
-    --left-body-background: var(--primary);
-    --left-body-first-x: 51;
-    --left-body-first-y: 0;
-    --left-body-second-x: 51;
-    --left-body-second-y: 100;
-    --left-body-third-x: 0;
-    --left-body-third-y: 100;
-    --right-wing-background: var(--primary);
-    --right-wing-first-x: 49;
-    --right-wing-first-y: 0;
-    --right-wing-second-x: 100;
-    --right-wing-second-y: 0;
-    --right-wing-third-x: 100;
-    --right-wing-third-y: 100;
-    --right-body-background: var(--primary);
-    --right-body-first-x: 49;
-    --right-body-first-y: 0;
-    --right-body-second-x: 49;
-    --right-body-second-y: 100;
-    --right-body-third-x: 100;
-    --right-body-third-y: 100;
-    display: block;
-    cursor: pointer;
-    position: relative;
-    border: 4px solid var(--font);
-    border-radius: 48px;
-    height: 100px;
-    text-align: center;
-    font-family: 'Helvetica Neue';
-    font-style: normal;
-    padding: 16px 32px;
-    font-weight: 500;
-    font-size: var(--fontSize);
-    background: none;
-    outline: none;
-    color: var(--text);
-    -webkit-tap-highlight-color: transparent;
-  }
-  .button .plane,
-  .button .trails {
-    pointer-events: none;
-    position: absolute;
-  }
-  .button .plane {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    filter: drop-shadow(0 3px 6px var(--shadow));
-    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) rotate(calc(var(--rotate) * 1deg)) translateZ(0);
-  }
-  .button .plane .left,
-  .button .plane .right {
-    position: absolute;
-    left: 1px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: var(--plane-opacity);
-    transform: translate(calc(var(--plane-x) * 1px), calc(var(--plane-y) * 1px)) translateZ(0);
-  }
-  .button .plane .left:before, .button .plane .left:after,
-  .button .plane .right:before,
-  .button .plane .right:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: calc(var(--border-radius) * 1px);
-    transform: translate(var(--part-x, 0.4%), var(--part-y, 0)) translateZ(0);
-    z-index: var(--z-index, 2);
-    background: var(--background, var(--left-wing-background));
-    -webkit-clip-path: polygon(calc(var(--first-x, var(--left-wing-first-x)) * 1%) calc(var(--first-y, var(--left-wing-first-y)) * 1%), calc(var(--second-x, var(--left-wing-second-x)) * 1%) calc(var(--second-y, var(--left-wing-second-y)) * 1%), calc(var(--third-x, var(--left-wing-third-x)) * 1%) calc(var(--third-y, var(--left-wing-third-y)) * 1%));
-            clip-path: polygon(calc(var(--first-x, var(--left-wing-first-x)) * 1%) calc(var(--first-y, var(--left-wing-first-y)) * 1%), calc(var(--second-x, var(--left-wing-second-x)) * 1%) calc(var(--second-y, var(--left-wing-second-y)) * 1%), calc(var(--third-x, var(--left-wing-third-x)) * 1%) calc(var(--third-y, var(--left-wing-third-y)) * 1%));
-  }
-  .button .plane .left:after {
-    --part-x: -1%;
-    --z-index: 1;
-    --background: var(--left-body-background);
-    --first-x: var(--left-body-first-x);
-    --first-y: var(--left-body-first-y);
-    --second-x: var(--left-body-second-x);
-    --second-y: var(--left-body-second-y);
-    --third-x: var(--left-body-third-x);
-    --third-y: var(--left-body-third-y);
-  }
-  .button .plane .right:before {
-    --part-x: -1%;
-    --z-index: 2;
-    --background: var(--right-wing-background);
-    --first-x: var(--right-wing-first-x);
-    --first-y: var(--right-wing-first-y);
-    --second-x: var(--right-wing-second-x);
-    --second-y: var(--right-wing-second-y);
-    --third-x: var(--right-wing-third-x);
-    --third-y: var(--right-wing-third-y);
-  }
-  .button .plane .right:after {
-    --part-x: 0;
-    --z-index: 1;
-    --background: var(--right-body-background);
-    --first-x: var(--right-body-first-x);
-    --first-y: var(--right-body-first-y);
-    --second-x: var(--right-body-second-x);
-    --second-y: var(--right-body-second-y);
-    --third-x: var(--right-body-third-x);
-    --third-y: var(--right-body-third-y);
-  }
-  .button .trails {
-    display: block;
-    width: 33px;
-    height: 64px;
-    top: -4px;
-    left: 16px;
-    fill: none;
-    stroke: var(--trails);
-    stroke-linecap: round;
-    stroke-width: 2;
-    stroke-dasharray: 57px;
-    stroke-dashoffset: calc(var(--trails-stroke) * 1px);
-    transform: rotate(68deg) translateZ(0);
-  }
-  .button span {
-    display: block;
-    position: relative;
-    z-index: 4;
-    opacity: var(--text-opacity);
-  }
-  .button span.success {
-    z-index: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 16px;
-    transform: translateX(calc(var(--success-x) * 1px)) translateZ(0);
-    opacity: var(--success-opacity);
-    color: var(--success);
-  }
-  .button span.success svg {
-    display: inline-block;
-    vertical-align: top;
-    width: 32px;
-    display: none;
-    height: 32px;
-    margin: 4px 8px 0 0;
-    fill: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 14px;
-    stroke: var(--success);
-    stroke-dashoffset: calc(var(--success-stroke) * 1px);
-  }
+.contactButton:hover {
+    background-color: var(--font);
+    color: hsla(53,75%,74%,1);
+}
 
 .logo {
     width: 120px;
@@ -289,51 +113,28 @@ a {
     line-height: 150%;
 }
 
-.marquee {
-    height: 68px;
-    width: 1120px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .marquee div {
-    display: block;
-    width: 200%;
-    position: absolute;
-    overflow: hidden;
-    animation: marquee 10s linear infinite;
-  }
-  
-  .marquee span {
-    float: left;
-    width: 50%;
+marquee {
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 500;
     font-size: var(--fontSize);
     line-height: 150%;
-  }
-  
-  @keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
-  }
+}
 
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
 
-/* 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --font: #fff;
-        --background: #000;
+    100% {
+        left: -100%;
     }
 }
-*/
+
 
 @media (max-width: 600px) {
 
     :root {
-        --font: #000;
-        --background: #fff;
         --fontSize: 24px;
     }
 
@@ -343,11 +144,18 @@ a {
         overflow: hidden;
     }
 
-    .button {
-        height: 80px;
+    .contactButton {
+        min-height: ;
     }
 
     .button span.success {
         top: 20px;
-      }
+    }
+}
+
+@media (min-width: 2000px) {
+
+    :root {
+        --fontSize: 56px;
+    }
 }
