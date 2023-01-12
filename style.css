@@ -28,6 +28,7 @@ body {
     margin: auto;
     max-width: 1120px;
     padding: 0 48px;
+    height: 100vh;
     gap: 64px;
 }
 
@@ -291,7 +292,6 @@ a {
 .marquee {
     height: 68px;
     width: 1120px;
-    margin: 0 auto;
     overflow: hidden;
     position: relative;
   }
