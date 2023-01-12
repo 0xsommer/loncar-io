@@ -1,7 +1,7 @@
 :root {
     --font: #000;
     --background: #fff;
-    --fontSize: 48px;
+    --fontSize: 3.2vw;
 }
 
 @font-face {
@@ -27,6 +27,7 @@ body {
     align-self: center;
     margin: auto;
     max-width: 1120px;
+    padding: 0 48px;
     gap: 64px;
 }
 
@@ -285,16 +286,12 @@ a {
     font-weight: 500;
     font-size: var(--fontSize);
     line-height: 150%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .marquee {
     height: 68px;
     width: 1120px;
-  
+    margin: 0 auto;
     overflow: hidden;
     position: relative;
   }
@@ -349,4 +346,8 @@ a {
     .button {
         height: 80px;
     }
+
+    .button span.success {
+        top: 20px;
+      }
 }
