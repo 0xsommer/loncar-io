@@ -4,10 +4,6 @@
     --fontSize: 48px;
 }
 
-html {
-    height: 100%;
-}
-
 @font-face {
     font-family: 'WorkSans';
     src: url("WorkSans-VariableFont_wght.ttf");
@@ -20,7 +16,6 @@ body {
     background-color: var(--background);
     color: var(--font);
     cursor: crosshair;
-    overflow: hidden;
 }
 
 .main {
@@ -32,7 +27,6 @@ body {
     align-self: center;
     margin: auto;
     max-width: 1120px;
-    height: 100vh;
     gap: 64px;
 }
 
@@ -283,10 +277,6 @@ a {
     border-radius: 200px;
 }
 
-.divider {
-    height: 0.15em;
-}
-
 .message {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -344,24 +334,19 @@ a {
 
 @media (max-width: 600px) {
 
-    .message {
-        font-size: 13vw;
-        margin: 24px 16px 80px 16px;
+    :root {
+        --font: #000;
+        --background: #fff;
+        --fontSize: 24px;
     }
 
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        font-weight: 400;
-        margin: 16px;
+    .main {
+        padding: 0 16px;
+        max-height: 100vh;
+        overflow: hidden;
     }
 
-    .mail {
-        grid-column: 1;
-        text-align: left;
-    }
-
-    .terms {
-        grid-column: 2
+    .button {
+        height: 80px;
     }
 }
