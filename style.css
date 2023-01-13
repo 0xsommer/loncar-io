@@ -141,7 +141,6 @@ marquee {
 
     .main {
         padding: 0 16px;
-        max-height: 100vh;
         overflow: hidden;
     }
 
