@@ -1,7 +1,7 @@
 :root {
     --font: #fff;
     --background: #000;
-    --fontSize: 3.2vw;
+    --fontSize: 3vw;
 }
 
 @font-face {
@@ -61,6 +61,7 @@ p {
 
 a {
     color: var(--font);
+    text-decoration: none;
 }
 
 .header {
@@ -76,7 +77,6 @@ a {
     display: flex;
     flex-direction: row;
     padding: 16px 32px;
-    min-height: 68px;
     border: 4px solid var(--font);
     border-radius: 48px;
     font-family: 'Helvetica Neue';
@@ -101,6 +101,7 @@ a {
     background-size: cover;
     background-position: center;
     border-radius: 200px;
+    border: 4px solid var(--font);
 }
 
 .message {
@@ -144,12 +145,12 @@ marquee {
         overflow: hidden;
     }
 
-    .contactButton {
-        min-height: ;
+    .marqueeWrapper {
+        margin-bottom: 10vh;
     }
 
-    .button span.success {
-        top: 20px;
+    .contactButton {
+        min-height: 40px;
     }
 }
 
