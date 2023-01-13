@@ -4,27 +4,21 @@
     --fontSize: 3vw;
 }
 
-@font-face {
-    font-family: 'WorkSans';
-    src: url("WorkSans-VariableFont_wght.ttf");
-    font-display: swap;
-}
-
 body {
     margin: 0;
     font-family: 'WorkSans', sans-serif;
     background-color: var(--background);
     color: var(--font);
     cursor: crosshair;
-    background-color:#fa99ff;
-background-image:
-radial-gradient(at 33% 20%, hsla(352,74%,68%,1) 0px, transparent 50%),
-radial-gradient(at 85% 20%, hsla(53,75%,74%,1) 0px, transparent 50%),
-radial-gradient(at 36% 64%, hsla(247,68%,62%,1) 0px, transparent 50%),
-radial-gradient(at 15% 23%, hsla(303,90%,62%,1) 0px, transparent 50%),
-radial-gradient(at 28% 78%, hsla(129,80%,66%,1) 0px, transparent 50%),
-radial-gradient(at 72% 2%, hsla(350,85%,73%,1) 0px, transparent 50%),
-radial-gradient(at 96% 13%, hsla(64,68%,75%,1) 0px, transparent 50%);
+    background-color: #fa99ff;
+    background-image:
+        radial-gradient(at 33% 20%, hsla(352, 74%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 85% 20%, hsla(53, 75%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 36% 64%, hsla(247, 68%, 62%, 1) 0px, transparent 50%),
+        radial-gradient(at 15% 23%, hsla(303, 90%, 62%, 1) 0px, transparent 50%),
+        radial-gradient(at 28% 78%, hsla(129, 80%, 66%, 1) 0px, transparent 50%),
+        radial-gradient(at 72% 2%, hsla(350, 85%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 96% 13%, hsla(64, 68%, 75%, 1) 0px, transparent 50%);
 }
 
 .main {
@@ -42,7 +36,7 @@ radial-gradient(at 96% 13%, hsla(64,68%,75%,1) 0px, transparent 50%);
 }
 
 .upperArea {
-    padding-top: 32px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,7 +85,7 @@ a {
 
 .contactButton:hover {
     background-color: var(--font);
-    color: hsla(53,75%,74%,1);
+    color: hsla(53, 75%, 74%, 1);
 }
 
 .logo {
